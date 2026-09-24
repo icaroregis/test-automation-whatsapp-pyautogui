@@ -14,6 +14,8 @@ COLUNAS = ["CONTATO", "MENSAGEM", "WHATSAPP"]
 def ler_planilha(caminho: Path = config.PLANILHA_ENTRADA) -> pd.DataFrame:
     """Lê a planilha como texto, para o telefone não virar número (5.58e+12)."""
     df = pd.read_excel(caminho, dtype=str).fillna("")
+    # Cabeçalhos como "CONTATO " (espaço sobrando) viram "CONTATO".
+    df.columns = df.columns.str.strip().str.upper()
 
     faltando = [coluna for coluna in COLUNAS if coluna not in df.columns]
     if faltando:
