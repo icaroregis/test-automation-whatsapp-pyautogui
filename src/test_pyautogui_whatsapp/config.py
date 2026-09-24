@@ -9,6 +9,12 @@ RAIZ = Path(__file__).resolve().parents[2]
 PLANILHA_ENTRADA = RAIZ / "data" / "contatos.xlsx"
 PLANILHA_RESULTADO = RAIZ / "data" / "resultado.xlsx"
 
+# Arquivo com as variáveis de ambiente (HOBOTS_CLIENT_SECRET, HOBOTS_INSTANCE_ID...)
+ARQUIVO_ENV = RAIZ / ".env"
+
+# Slug da task no Hobots: é o nome da execução que aparece em Solicitações.
+HOBOTS_TASK = "envio-whatsapp"
+
 # Print pequeno da caixa "Digite uma mensagem" (Passo 6, versão 2).
 # Se o arquivo não existir, o script usa a espera simples (ESPERA_CHAT).
 IMAGEM_CAIXA_MENSAGEM = RAIZ / "imagens" / "caixa_mensagem.png"

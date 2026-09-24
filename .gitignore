@@ -11,3 +11,6 @@ wheels/
 
 # Dados pessoais (telefones)
 data/
+
+# Segredos (Client Secret do Hobots)
+.env
