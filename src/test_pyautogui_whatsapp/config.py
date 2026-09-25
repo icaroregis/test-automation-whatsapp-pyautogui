@@ -12,8 +12,8 @@ PLANILHA_RESULTADO = RAIZ / "data" / "resultado.xlsx"
 # Arquivo com as variáveis de ambiente (HOBOTS_CLIENT_SECRET, HOBOTS_INSTANCE_ID...)
 ARQUIVO_ENV = RAIZ / ".env"
 
-# Slug da task no Hobots: é o nome da execução que aparece em Solicitações.
-HOBOTS_TASK = "envio-whatsapp"
+# Slug da task no Hobots: precisa ser IGUAL ao campo "task do agente" do formulário.
+HOBOTS_TASK = "processar_envios"
 
 # Print pequeno da caixa "Digite uma mensagem" (Passo 6, versão 2).
 # Se o arquivo não existir, o script usa a espera simples (ESPERA_CHAT).
